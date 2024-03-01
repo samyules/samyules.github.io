@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>Scrambled Brains for Breakfast</title>
+	<subtitle>A place to throw my scrambled brains against the wall to see what sticks.</subtitle>
+	<link href="https://example.com/feed/feed.xml" rel="self"/>
+	<link href="https://example.com/"/>
+	<updated>2024-02-25T00:00:00Z</updated>
+	<id>https://example.com/</id>
+	<author>
+		<name>Sam Westwood</name>
+		<email>sam@thewestwoods.us</email>
+	</author>
+	
+	<entry>
+		<title>Snorkeling</title>
+		<link href="https://example.com/blog/2024-02-25-snorkeling/"/>
+		<updated>2024-02-25T00:00:00Z</updated>
+		<id>https://example.com/blog/2024-02-25-snorkeling/</id>
+		<content type="html">&lt;h1 id=&quot;snorkeling&quot; tabindex=&quot;-1&quot;&gt;Snorkeling &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-02-25-snorkeling/&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;I am now a T-mobile Home Internet customer. It uses 4G LTE and 5G cellular networks to provide internet connectivity. They provide you with a cellular modem/router with a wifi hotspot and a couple of ethernet ports. I figured out how to disable the wifi and connected it to the WAN port of my UDM Pro. Easy-peasy.&lt;/p&gt;
+&lt;p&gt;There are some trade offs. There is some variability in the signal quality, which translates to extra latency some of the time. The cellular networks also use CG-NAT and &lt;strong&gt;T-mobile does not provide a public IP address.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I could get around this by setting up some &lt;em&gt;Cloudflare tunnels&lt;/em&gt;. They are easy and work great. The main problem is that I want to control my own SSL certificates. Cloudflare creates a wildcard certificate for subdomains (*.mydomain.io), but only root level subdomains. Inside my LAN I use sub-subdomains. For example, &lt;em&gt;service.computername&lt;/em&gt;.mydomain.io. For publicly exposed services I prefer using the same URL inside my LAN and over WAN, and Cloudflare tunnels are not able to give me that.&lt;/p&gt;
+&lt;p&gt;My LAN is now diving beneath the depths CG-NAT. I need a snorkel.&lt;/p&gt;
+&lt;pre class=&quot;language-txt&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;    public ip (vps)
+
+     |  s  |
+/&#92;/&#92;/|  n  |&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;/&#92;
+     |  o  |  Deep Waters of CG-NAT
+     |  r  |
+     |  k  |
+     |  e  |
+     |  l  |
+     &#92;     &#92;________
+      &#92;  tailscale --&gt; DMZ --&gt; LAN
+       &#92;____________
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So basically, I’ve got a VPS with a public IP. It connects to my DMZ proxy server through my Tailscale tailnet. The VPS forwards any traffic it receives on ports 80 and 443 to the proxy server. &lt;strong&gt;¡Viola! A snorkel!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;forwarding-packets&quot; tabindex=&quot;-1&quot;&gt;Forwarding Packets &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-02-25-snorkeling/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;My initial thought was to turn my VPS into a router. I tried using iptables to forward ports, but I’m not very good at writing rules and had a few problems. I couldn’t figure out how to forward packets through tailscale. 🤔 After some more searching around the interwebs I found an old program called &lt;em&gt;&lt;a href=&quot;https://github.com/samhocevar/rinetd&quot;&gt;rinetd&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;rinetd-setup&quot; tabindex=&quot;-1&quot;&gt;rinetd setup &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-02-25-snorkeling/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;rinetd&lt;/em&gt; silently forwards tcp and udp traffic. It is found in most linux package managers. I’m using an Ubuntu server, so I installed it with an easy &lt;code&gt;sudo apt install rinetd&lt;/code&gt;. The configuration file is found in &lt;code&gt;/etc/rinetd.conf&lt;/code&gt;. The main section looks like this:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# bindaddress bindport connectaddress connectport&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;137.184&lt;/span&gt;.89.83 &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100.86&lt;/span&gt;.67.77 &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;137.184&lt;/span&gt;.89.83 &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100.86&lt;/span&gt;.67.77 &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;bindaddress&lt;/code&gt; is the public ip of the VPS, and the &lt;code&gt;connectaddress&lt;/code&gt; is the tailnet address of the proxy server. Easy. After updating the configuration, run a quick &lt;code&gt;systemctl start rinetd&lt;/code&gt; and you are set. No need to mess with forwarding rules. It just works.&lt;/p&gt;
+&lt;p&gt;Time to make more coffee.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Diving into the deep</title>
+		<link href="https://example.com/blog/2024-02-24-diving-into-the-deep/"/>
+		<updated>2024-02-24T00:00:00Z</updated>
+		<id>https://example.com/blog/2024-02-24-diving-into-the-deep/</id>
+		<content type="html">&lt;h1 id=&quot;diving-into-the-deep&quot; tabindex=&quot;-1&quot;&gt;Diving into the deep &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-02-24-diving-into-the-deep/&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Recently I had a little &lt;em&gt;snafu&lt;/em&gt; with Xfinity. I have been an Xfinity customer for more than a decade. In my area, it has really been the &lt;em&gt;only&lt;/em&gt; option for high-speed internet connections. I have always felt uneasy about the leverage that Xfinity has had over the market. I hate the equipment fees, and the lack of good customer service. I refused to use an Xfinity router or modem, instead opting to buy my own.&lt;/p&gt;
+&lt;p&gt;A few years ago they implemented a data cap, and I — untrusting of the monopoly-induced power of the company — purchased a UDM Pro SE and started measuring my own data usage. Throughout these years the usage reported by Xfinity was typically higher than my own measurements, but within a reasonable margin of error. However, that changed in December of 2023. During that month the UDM Pro measured about 800GB of throughput, and Xfinity reported a whopping &lt;strong&gt;2400GB&lt;/strong&gt; of usage! &lt;strong&gt;Three times more&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;I walked in to the nearest Xfinity store intending to ask for a service ticket. &lt;s&gt;However, I was told in no uncertain terms that &lt;em&gt;&lt;strong&gt;the Lord God of Xfinity&lt;/strong&gt;&lt;/em&gt; in it&#39;s &lt;em&gt;&lt;strong&gt;mighty Glory&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;omnicient knowing&lt;/strong&gt;&lt;/em&gt; is the &lt;em&gt;only&lt;/em&gt; source of &lt;strong&gt;truth&lt;/strong&gt;. My own paltry attempt at measuring throughput was meaningless. &lt;em&gt;Xfinity&#39;s&lt;/em&gt; mighty judgement would not be questioned! How dare I question it?&lt;/s&gt; &lt;em&gt;Okay, okay... those were not their exact words, but they are not &lt;strong&gt;that&lt;/strong&gt; hyperbolic either.&lt;/em&gt; They refused to submit a service ticket on my behalf, and told me to quietly pay the bill of over $300, &lt;s&gt;and that I should leave with a &lt;em&gt;smile&lt;/em&gt; on my face&lt;/s&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instead I left with a solid resolve to cancel my account.&lt;/strong&gt; I saw the commercials for T-Mobile Home Internet, advertised for $50 a month with &lt;em&gt;unlimited&lt;/em&gt; data usage. It actually ended up being slightly cheaper than that since I am an existing T-mobile customer. It offers better speeds than any other ISP in my area besides Xfinity, and I am happy with my choice (so far). A week or so later I closed my Xfinity account and I am not looking back.&lt;/p&gt;
+&lt;p&gt;T-mobile home internet brings some additional challenges. Namely, I am now sitting behind a messy CG-NAT. I do not have a public IP address to access my home network. If you google around a bit, most people solve this by using a &lt;em&gt;Cloudflare&lt;/em&gt; tunnel. I have used them before, and it is an easy and effective solution, even providing ssl certificates automatically. But, &lt;em&gt;I&lt;/em&gt; prefer doing things the &lt;em&gt;hard&lt;/em&gt; way. It&#39;s the only way to learn something new.&lt;/p&gt;
+&lt;p&gt;This post is getting quite long. Now that you know the backstory, I will post the &lt;em&gt;exciting&lt;/em&gt; details of my own personal solution to these problems.&lt;/p&gt;
+&lt;p&gt;Time to make more coffee.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>This is my fourth post.</title>
+		<link href="https://example.com/blog/fourthpost/"/>
+		<updated>2018-09-30T00:00:00Z</updated>
+		<id>https://example.com/blog/fourthpost/</id>
+		<content type="html">&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
+&lt;p&gt;Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/img/IdthKOzqFA-350.avif 350w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/img/IdthKOzqFA-350.webp 350w&quot;&gt;&lt;img alt=&quot;A possum parent and two possum kids hanging from the iconic red balloon&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/img/IdthKOzqFA-350.png&quot; width=&quot;350&quot; height=&quot;685&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/fourthpost/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.&lt;/p&gt;
+</content>
+	</entry>
+</feed>

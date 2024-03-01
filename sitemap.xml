@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	
+	<url>
+		<loc>https://example.com/blog/fourthpost/</loc>
+		<lastmod>2018-09-30</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/blog/2024-02-24-diving-into-the-deep/</loc>
+		<lastmod>2024-02-24</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/blog/2024-02-25-snorkeling/</loc>
+		<lastmod>2024-02-25</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/about/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/blog/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/networking/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/xfinity/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/evil/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/cg-nat/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/homelab/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/rant/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/snorkel/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/public-ip/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/tailscale/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/second-tag/</loc>
+		<lastmod>2024-03-01</lastmod>
+	</url>
+</urlset>
