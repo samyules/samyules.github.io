@@ -1,8 +1,12 @@
-# eleventy-base-blog v8
+# samyules.github.io
+
+My own personal blog, using the following eleventy starter.
+
+## eleventy-base-blog v8
 
 A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v2.0 release](https://www.11ty.dev/blog/eleventy-v2/)).
 
-## Getting Started
+### Getting Started
 
 * [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
 
@@ -43,7 +47,7 @@ npx @11ty/eleventy --serve
 
 Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the internals.
 
-## Features
+### Features
 
 - Using [Eleventy v2.0](https://www.11ty.dev/blog/eleventy-v2/) with zero-JavaScript output.
 	- Content is exclusively pre-rendered (this is a static site).
@@ -79,14 +83,14 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 	- Zero-maintenance tag pages ([View on the Demo](https://eleventy-base-blog.netlify.app/tags/))
 	- Content not found (404) page
 
-## Demos
+### Demos
 
 - [Netlify](https://eleventy-base-blog.netlify.com/)
 - [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
 - [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
 - [Cloudflare Pages](https://eleventy-base-blog-d2a.pages.dev/)
 
-## Deploy this to your own site
+### Deploy this to your own site
 
 Deploy this Eleventy site in just a few clicks on these services:
 
@@ -96,7 +100,7 @@ Deploy this Eleventy site in just a few clicks on these services:
 - [Try it out on Stackblitz](https://stackblitz.com/github/11ty/eleventy-base-blog)
 - Read more about [Deploying an Eleventy project](https://www.11ty.dev/docs/deployment/) to the web.
 
-### Implementation Notes
+#### Implementation Notes
 
 - `content/about/index.md` is an example of a content page.
 - `content/blog/` has the blog posts but really they can live in any directory. They need only the `posts` tag to be included in the blog posts [collection](https://www.11ty.dev/docs/collections/).
@@ -112,7 +116,7 @@ Deploy this Eleventy site in just a few clicks on these services:
 	- `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
 - `_includes/postslist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `content/index.njk` has an example of how to use it.
 
-#### Content Security Policy
+##### Content Security Policy
 
 If your site enforces a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (as public-facing sites should), you have a few choices (pick one):
 
