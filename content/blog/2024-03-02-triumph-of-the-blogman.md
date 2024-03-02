@@ -1,7 +1,7 @@
 ---
 title: "Triumph of the Blogman"
 date: 2024-03-02
-tags: [11ty, font-size, css]
+tags: [11ty, font-size, css, github-actions, github-pages]
 draft: true
 ---
 I spent my free time this week converting my github pages site from jekyll to [11ty](https://11ty.dev). I'm fairly new to the whole static-site-generator scene. My blog only had 2 or 3 posts. The main problem I had with jekyll is the build times. My site, with only a few posts and a fairly simple theme took around **5 minutes** to build. Could it be any slower? It is also written in *perl* 🤢. (There is *probably* nothing wrong with the perl language, but it is *sooo* 1990, and I know **nothing** about it.) For the same content, *11ty* builds only take about ***25 seconds***. Less than a minute after doing a `git push`, I can see the update on my site! 11ty is written in JavaScript too, so it's a bit more familiar for me.
@@ -54,4 +54,7 @@ jobs:
 4. In the repo settings, **change the pages Build Source** to the `gh-pages` branch. (This took me several hours to figure out.) The custom action runs everytime the main branch is updated. The custom action updates the gh-pages branch with the built output of the site. Failing to change the GitHub Pages Build Source will result in a 404 error and tell you that there is no index.html file when you attempt to navigate to your site.
 
 ### Look and Feel
-I decided to use [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) as a starting point for my theme. As an 11ty beginner, it offers a good structure and includes some default plugins already activated. (I think after the last few days of playing around, I am a bit more comfortable with the eleventy.config.js file.)
+I decided to use [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) as a starting point for my theme. As an 11ty beginner, it offers a good structure and includes some default plugins already activated. (I think after the last few days of playing around, I am a bit more comfortable with the eleventy.config.js file.) Now, me being me, I can't just leave the default options in place.
+
+#### Theme Colors
+Thankfully eleventy-base-blog includes support for automatic light and dark modes. The light theme is pretty much perfect, but the dark theme had some weird link colors.
