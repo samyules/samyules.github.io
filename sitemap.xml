@@ -90,4 +90,14 @@
 		<loc>https://example.com/tags/css/</loc>
 		<lastmod>2024-03-02</lastmod>
 	</url>
+	
+	<url>
+		<loc>https://example.com/tags/github-actions/</loc>
+		<lastmod>2024-03-02</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/github-pages/</loc>
+		<lastmod>2024-03-02</lastmod>
+	</url>
 </urlset>
