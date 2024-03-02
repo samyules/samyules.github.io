@@ -2,6 +2,8 @@
 
 My own personal blog, using the following eleventy starter.
 
+I sure hope I can make it work.
+
 ## eleventy-base-blog v8
 
 A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v2.0 release](https://www.11ty.dev/blog/eleventy-v2/)).
