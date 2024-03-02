@@ -487,7 +487,6 @@ h2 + .header-anchor {
 	<li><a href="/tags/tailscale/" class="post-tag">tailscale</a></li>
 </ul>
 
-<h1 id="snorkeling" tabindex="-1">Snorkeling <a class="header-anchor" href="#snorkeling">#</a></h1>
 <p>I am now a T-mobile Home Internet customer. It uses 4G LTE and 5G cellular networks to provide internet connectivity. They provide you with a cellular modem/router with a wifi hotspot and a couple of ethernet ports. I figured out how to disable the wifi and connected it to the WAN port of my UDM Pro. Easy-peasy.</p>
 <p>There are some trade offs. There is some variability in the signal quality, which translates to extra latency some of the time. The cellular networks also use CG-NAT and <strong>T-mobile does not provide a public IP address.</strong></p>
 <p>I could get around this by setting up some <em>Cloudflare tunnels</em>. They are easy and work great. The main problem is that I want to control my own SSL certificates. Cloudflare creates a wildcard certificate for subdomains (*.mydomain.io), but only root level subdomains. Inside my LAN I use sub-subdomains. For example, <em>service.computername</em>.mydomain.io. For publicly exposed services I prefer using the same URL inside my LAN and over WAN, and Cloudflare tunnels are not able to give me that.</p>

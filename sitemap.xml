@@ -75,4 +75,19 @@
 		<loc>https://example.com/tags/tailscale/</loc>
 		<lastmod>2024-03-02</lastmod>
 	</url>
+	
+	<url>
+		<loc>https://example.com/tags/11ty/</loc>
+		<lastmod>2024-03-02</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/font-size/</loc>
+		<lastmod>2024-03-02</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/css/</loc>
+		<lastmod>2024-03-02</lastmod>
+	</url>
 </urlset>
