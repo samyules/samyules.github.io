@@ -124,12 +124,16 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	font-size: .9em;
 }
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  font-size: .9rem;
+}
+
 pre:not([class*="language-"]) {
 	margin: .5em 0;
 	line-height: 1.125; /*1.375; 22px /16 */
-	font-size: .9em;
 	-moz-tab-size: var(--syntax-tab-size);
 	-o-tab-size: var(--syntax-tab-size);
 	tab-size: var(--syntax-tab-size);
@@ -271,4 +275,6 @@ a[href].header-anchor:focus,
 
 h2 + .header-anchor {
 	font-size: 1.5em;
+}
+-size: 1.5em;
 }
