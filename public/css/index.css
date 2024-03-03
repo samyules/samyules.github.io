@@ -124,12 +124,12 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	font-size: .9em;
+	font-size: .9rem;
 }
 pre:not([class*="language-"]) {
 	margin: .5em 0;
 	line-height: 1.125; /*1.375; 22px /16 */
-	font-size: .9em;
+	font-size: .9rem;
 	-moz-tab-size: var(--syntax-tab-size);
 	-o-tab-size: var(--syntax-tab-size);
 	tab-size: var(--syntax-tab-size);
@@ -142,6 +142,16 @@ pre:not([class*="language-"]) {
 	word-spacing: normal;
 	word-break: normal;
 }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	font-size: .9rem;
+	background: #272822;
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
 code {
 	word-break: break-all;
 }
