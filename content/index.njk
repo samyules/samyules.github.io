@@ -5,6 +5,16 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 5
 ---
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+
+{% set mostRecent = collections.posts | head(-1) %}
+{% for post in mostRecent %}
+<h1>{{ post.data.title }}</h1>
+{{ post.templateContent | safe }}
+{% endfor %}
+<hr class="dashed">
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
