@@ -3,7 +3,6 @@ title: "Diving into the deep"
 date: 2024-02-24
 tags: [networking, xfinity, evil, cg-nat, homelab, rant]
 ---
-# Diving into the deep
 Recently I had a little *snafu* with Xfinity. I have been an Xfinity customer for more than a decade. In my area, it has really been the *only* option for high-speed internet connections. I have always felt uneasy about the leverage that Xfinity has had over the market. I hate the equipment fees, and the lack of good customer service. I refused to use an Xfinity router or modem, instead opting to buy my own.
 
 A few years ago they implemented a data cap, and I — untrusting of the monopoly-induced power of the company — purchased a UDM Pro SE and started measuring my own data usage. Throughout these years the usage reported by Xfinity was typically higher than my own measurements, but within a reasonable margin of error. However, that changed in December of 2023. During that month the UDM Pro measured about 800GB of throughput, and Xfinity reported a whopping **2400GB** of usage! **Three times more**!

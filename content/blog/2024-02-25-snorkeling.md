@@ -4,7 +4,6 @@ description: Description of my public ip over tailnet setup.
 date: 2024-02-25
 tags: [networking, snorkel, cg-nat, public-ip, tailscale]
 ---
-# Snorkeling
 I am now a T-mobile Home Internet customer. It uses 4G LTE and 5G cellular networks to provide internet connectivity. They provide you with a cellular modem/router with a wifi hotspot and a couple of ethernet ports. I figured out how to disable the wifi and connected it to the WAN port of my UDM Pro. Easy-peasy.
 
 There are some trade offs. There is some variability in the signal quality, which translates to extra latency some of the time. The cellular networks also use CG-NAT and **T-mobile does not provide a public IP address.**
