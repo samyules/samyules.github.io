@@ -42,32 +42,12 @@
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/xfinity/</loc>
-		<lastmod>2024-03-03</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/evil/</loc>
+		<loc>https://example.com/tags/snorkel/</loc>
 		<lastmod>2024-03-03</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/cg-nat/</loc>
-		<lastmod>2024-03-03</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/homelab/</loc>
-		<lastmod>2024-03-03</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/rant/</loc>
-		<lastmod>2024-03-03</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/snorkel/</loc>
 		<lastmod>2024-03-03</lastmod>
 	</url>
 	
@@ -78,6 +58,26 @@
 	
 	<url>
 		<loc>https://example.com/tags/tailscale/</loc>
+		<lastmod>2024-03-03</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/xfinity/</loc>
+		<lastmod>2024-03-03</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/evil/</loc>
+		<lastmod>2024-03-03</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/homelab/</loc>
+		<lastmod>2024-03-03</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/rant/</loc>
 		<lastmod>2024-03-03</lastmod>
 	</url>
 	
