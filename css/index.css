@@ -3,6 +3,7 @@
 	/*--font-family: -apple-system, system-ui, sans-serif;*/
 	--font-family: "Amiri", serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family-headings: "Caveat", cursive;
 }
 
 /* Theme colors */
@@ -130,7 +131,7 @@ code {
 	background: #272822;
 	padding: .1rem .3rem .2rem;
   border-radius: .2rem;
-  word-break: normal;
+  word-break: break-all;
 }
 
 :not(pre) > code[class*="language-"],
@@ -155,10 +156,10 @@ pre:not([class*="language-"]) {
 	word-break: normal;
 }
 
-/*code {
+code {
 	word-break: break-all;
 }
-*/
+
 
 /* Header */
 header {
@@ -199,7 +200,7 @@ header {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
+	padding-left: 2.5rem;
 }
 .postlist-item {
 	display: flex;
@@ -243,8 +244,8 @@ header {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
+	text-transform: lowercase;
+	font-style: normal;
 }
 .postlist-item > .post-tag {
 	align-self: center;
@@ -283,8 +284,18 @@ a[href].header-anchor:focus,
 	color: #aaa;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-headings);
+	font-optical-sizing: auto;
+	font-weight: 450;
+	font-style: normal;
+}
+
 h2 + .header-anchor {
 	font-size: 1.5em;
 }
--size: 1.5em;
+
+hr.dashed {
+	border-top: 1px dashed var(--color-gray-20);
+	border-bottom-style: none;
 }

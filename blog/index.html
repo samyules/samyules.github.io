@@ -12,6 +12,11 @@
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 		<link rel="alternative icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 		
 		<style>.postlist { counter-reset: start-from 4 }
 * { box-sizing: border-box; }
@@ -20,6 +25,7 @@
 	/*--font-family: -apple-system, system-ui, sans-serif;*/
 	--font-family: "Amiri", serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family-headings: "Caveat", cursive;
 }
 
 /* Theme colors */
@@ -147,7 +153,7 @@ code {
 	background: #272822;
 	padding: .1rem .3rem .2rem;
   border-radius: .2rem;
-  word-break: normal;
+  word-break: break-all;
 }
 
 :not(pre) > code[class*="language-"],
@@ -172,10 +178,10 @@ pre:not([class*="language-"]) {
 	word-break: normal;
 }
 
-/*code {
+code {
 	word-break: break-all;
 }
-*/
+
 
 /* Header */
 header {
@@ -216,7 +222,7 @@ header {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
+	padding-left: 2.5rem;
 }
 .postlist-item {
 	display: flex;
@@ -260,8 +266,8 @@ header {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
+	text-transform: lowercase;
+	font-style: normal;
 }
 .postlist-item > .post-tag {
 	align-self: center;
@@ -300,10 +306,20 @@ a[href].header-anchor:focus,
 	color: #aaa;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-headings);
+	font-optical-sizing: auto;
+	font-weight: 450;
+	font-style: normal;
+}
+
 h2 + .header-anchor {
 	font-size: 1.5em;
 }
--size: 1.5em;
+
+hr.dashed {
+	border-top: 1px dashed var(--color-gray-20);
+	border-bottom-style: none;
 }</style>
 	</head>
 	<body>

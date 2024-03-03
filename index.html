@@ -12,14 +12,188 @@
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 		<link rel="alternative icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 		
-		<style>.postlist { counter-reset: start-from 4 }
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+.postlist { counter-reset: start-from 4 }
 * { box-sizing: border-box; }
 /* Defaults */
 :root {
 	/*--font-family: -apple-system, system-ui, sans-serif;*/
 	--font-family: "Amiri", serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family-headings: "Caveat", cursive;
 }
 
 /* Theme colors */
@@ -147,7 +321,7 @@ code {
 	background: #272822;
 	padding: .1rem .3rem .2rem;
   border-radius: .2rem;
-  word-break: normal;
+  word-break: break-all;
 }
 
 :not(pre) > code[class*="language-"],
@@ -172,10 +346,10 @@ pre:not([class*="language-"]) {
 	word-break: normal;
 }
 
-/*code {
+code {
 	word-break: break-all;
 }
-*/
+
 
 /* Header */
 header {
@@ -216,7 +390,7 @@ header {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
+	padding-left: 2.5rem;
 }
 .postlist-item {
 	display: flex;
@@ -260,8 +434,8 @@ header {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
+	text-transform: lowercase;
+	font-style: normal;
 }
 .postlist-item > .post-tag {
 	align-self: center;
@@ -300,10 +474,20 @@ a[href].header-anchor:focus,
 	color: #aaa;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-headings);
+	font-optical-sizing: auto;
+	font-weight: 450;
+	font-style: normal;
+}
+
 h2 + .header-anchor {
 	font-size: 1.5em;
 }
--size: 1.5em;
+
+hr.dashed {
+	border-top: 1px dashed var(--color-gray-20);
+	border-bottom-style: none;
 }</style>
 	</head>
 	<body>
@@ -324,6 +508,96 @@ h2 + .header-anchor {
 
 		<main id="skip">
 			
+
+
+
+
+<h1>Triumph of the Blogman</h1>
+<p>I spent my free time this week converting my github pages site from jekyll to <a href="https://11ty.dev">11ty</a>. I'm fairly new to the whole static-site-generator scene. My blog only had 2 or 3 posts. The main problem I had with jekyll is the build times. My site, with only a few posts and a fairly simple theme took around <strong>5 minutes</strong> to build. Could it be any slower? It is also written in <em>perl</em> 🤢. (There is <em>probably</em> nothing wrong with the perl language, but it is <em>sooo</em> 1990, and I know <strong>nothing</strong> about it.) For the same content, <em>11ty</em> builds only take about <em><strong>25 seconds</strong></em>. Less than a minute after doing a <code>git push</code>, I can see the update on my site! 11ty is written in JavaScript too, so it's a bit more familiar for me.</p>
+<h2 id="issues" tabindex="-1">Issues <a class="header-anchor" href="#issues">#</a></h2>
+<p>Throughout this process I ran into a few issues. The first problem was that I didn't know how to stop using jekyll. Github pages default to building with jekyll, and from searching and reading I had gathered that it was possible. However, the forums and tutorials that I found were not very clear about the process. Well—disabling jekyll is pretty easy. Just add an empty file called <code>.nojekyll</code> to the repository. What I had a hard time with was <em>replacing</em> jekyll with something else. I ended up finding <a href="https://www.linkedin.com/pulse/eleventy-github-pages-lea-tortay/">this tutorial</a> from 4 years ago that worked.</p>
+<h3 id="github-actions" tabindex="-1">GitHub actions <a class="header-anchor" href="#github-actions">#</a></h3>
+<ol>
+<li>First create a <code>.nojekyll</code> file.</li>
+<li>Create a <code>.github/workflows/</code> folder and run <code>git add .github</code></li>
+<li>Create a custom github action, like the following:</li>
+</ol>
+<pre class="language-yaml" tabindex="0"><code class="language-yaml"><span class="token comment"># .github/workflows/build.yml</span>
+<span class="token key atrule">name</span><span class="token punctuation">:</span> Build Eleventy
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span><span class="token number">22.04</span>
+
+    <span class="token key atrule">strategy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">matrix</span><span class="token punctuation">:</span>
+        <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>16.x<span class="token punctuation">]</span>
+
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Use Node.js $NaN
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> $NaN
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies &amp; build
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          npm ci
+          npm run build</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./_site <span class="token comment">#this should match the output folder from eleventy.config.js</span>
+          <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $</code></pre>
+<ol start="4">
+<li>In the repo settings, <strong>change the pages Build Source</strong> to the <code>gh-pages</code> branch. (This took me several hours to figure out.) The custom action runs everytime the main branch is updated. The custom action updates the gh-pages branch with the built output of the site. Failing to change the GitHub Pages Build Source will result in a 404 error and tell you that there is no index.html file when you attempt to navigate to your site.</li>
+</ol>
+<h3 id="look-and-feel" tabindex="-1">Look and Feel <a class="header-anchor" href="#look-and-feel">#</a></h3>
+<p>I decided to use <a href="https://github.com/11ty/eleventy-base-blog">eleventy-base-blog</a> as a starting point for my theme. As an 11ty beginner, it offers a good structure and includes some default plugins already activated. (I think after the last few days of playing around, I am a bit more comfortable with the eleventy.config.js file.) Now, me being me, I can't just leave the default options in place.</p>
+<h4 id="theme-colors" tabindex="-1">Theme Colors <a class="header-anchor" href="#theme-colors">#</a></h4>
+<p>Thankfully eleventy-base-blog includes support for automatic light and dark modes. The light theme is pretty much perfect, but the dark theme had some weird link colors. Light-purplish on a dark blue background 😠, really?! I changed it to shade of Vivid Blue. Found in <code>public/css/index.css</code>.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">prefers-color-scheme</span><span class="token punctuation">:</span> dark<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+	<span class="token selector">:root</span> <span class="token punctuation">{</span>
+		<span class="token property">--color-gray-20</span><span class="token punctuation">:</span> #e0e0e0<span class="token punctuation">;</span>
+		<span class="token property">--color-gray-50</span><span class="token punctuation">:</span> #C0C0C0<span class="token punctuation">;</span>
+		<span class="token property">--color-gray-90</span><span class="token punctuation">:</span> #dad8d8<span class="token punctuation">;</span>
+
+		<span class="token comment">/* --text-color is assigned to --color-gray-_ above */</span>
+		<span class="token property">--text-color-link</span><span class="token punctuation">:</span> #1493fb<span class="token punctuation">;</span>
+		<span class="token property">--text-color-link-active</span><span class="token punctuation">:</span> #2d9ffb<span class="token punctuation">;</span>
+		<span class="token property">--text-color-link-visited</span><span class="token punctuation">:</span> #5fb6fc<span class="token punctuation">;</span>
+
+		<span class="token property">--background-color</span><span class="token punctuation">:</span> #15202b<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="font-family" tabindex="-1">Font Family <a class="header-anchor" href="#font-family">#</a></h4>
+<p>The default settings are set up with a very basic <em>sans</em> font family. It looks small compared to the text in the code blocks as well. I found a great font family on Google Fonts called <a href="https://fonts.google.com/specimen/Amiri?query=Amiri">Amiri</a>. I made some more changes in the css.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">:root</span><span class="token punctuation">{</span>
+  <span class="token property">--font-family</span><span class="token punctuation">:</span> <span class="token string">"Amiri"</span><span class="token punctuation">,</span> serif<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">body</span><span class="token punctuation">{</span>
+	<span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--font-family<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 1.12em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The font used in the code blocks seemed too large for my taste. This turned into a learning moment. I thought I could simply change the <code>font-size</code> for the <code>pre</code> blocks to something like <code>.9em</code>. Turns out that didn't change anything.  Apparently the way css inherits variable font sizes inside child elements means that <code>em</code> doesn't  reference anything. I found that inside of the <code>pre</code> block you must use <code>rem</code> instead. <code>rem</code> references the root of the document.</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">:not(pre) > code[class*="language-"],
+pre[class*="language-"]</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> .9rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>Much better!</strong></p>
+<p>Time for a nightcap. Goodnight! 🥱</p>
+
+
+<hr class="dashed">
+
 
 
 <h1>Latest 3 Posts</h1>
