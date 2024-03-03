@@ -155,9 +155,10 @@ pre:not([class*="language-"]) {
 	word-break: normal;
 }
 
-code {
+/*code {
 	word-break: break-all;
 }
+*/
 
 /* Header */
 header {
