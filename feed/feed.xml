@@ -4,12 +4,101 @@
 	<subtitle>A place to throw my scrambled brains against the wall to see what sticks.</subtitle>
 	<link href="https://example.com/feed/feed.xml" rel="self"/>
 	<link href="https://example.com/"/>
-	<updated>2024-02-25T00:00:00Z</updated>
+	<updated>2024-03-02T00:00:00Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Sam Westwood</name>
 		<email>sam@thewestwoods.us</email>
 	</author>
+	
+	<entry>
+		<title>Triumph of the Blogman</title>
+		<link href="https://example.com/blog/2024-03-02-triumph-of-the-blogman/"/>
+		<updated>2024-03-02T00:00:00Z</updated>
+		<id>https://example.com/blog/2024-03-02-triumph-of-the-blogman/</id>
+		<content type="html">&lt;p&gt;I spent my free time this week converting my github pages site from jekyll to &lt;a href=&quot;https://11ty.dev&quot;&gt;11ty&lt;/a&gt;. I&#39;m fairly new to the whole static-site-generator scene. My blog only had 2 or 3 posts. The main problem I had with jekyll is the build times. My site, with only a few posts and a fairly simple theme took around &lt;strong&gt;5 minutes&lt;/strong&gt; to build. Could it be any slower? It is also written in &lt;em&gt;perl&lt;/em&gt; 🤢. (There is &lt;em&gt;probably&lt;/em&gt; nothing wrong with the perl language, but it is &lt;em&gt;sooo&lt;/em&gt; 1990, and I know &lt;strong&gt;nothing&lt;/strong&gt; about it.) For the same content, &lt;em&gt;11ty&lt;/em&gt; builds only take about &lt;em&gt;&lt;strong&gt;25 seconds&lt;/strong&gt;&lt;/em&gt;. Less than a minute after doing a &lt;code&gt;git push&lt;/code&gt;, I can see the update on my site! 11ty is written in JavaScript too, so it&#39;s a bit more familiar for me.&lt;/p&gt;
+&lt;h2 id=&quot;issues&quot; tabindex=&quot;-1&quot;&gt;Issues &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Throughout this process I ran into a few issues. The first problem was that I didn&#39;t know how to stop using jekyll. Github pages default to building with jekyll, and from searching and reading I had gathered that it was possible. However, the forums and tutorials that I found were not very clear about the process. Well—disabling jekyll is pretty easy. Just add an empty file called &lt;code&gt;.nojekyll&lt;/code&gt; to the repository. What I had a hard time with was &lt;em&gt;replacing&lt;/em&gt; jekyll with something else. I ended up finding &lt;a href=&quot;https://www.linkedin.com/pulse/eleventy-github-pages-lea-tortay/&quot;&gt;this tutorial&lt;/a&gt; from 4 years ago that worked.&lt;/p&gt;
+&lt;h3 id=&quot;github-actions&quot; tabindex=&quot;-1&quot;&gt;GitHub actions &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;First create a &lt;code&gt;.nojekyll&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;Create a &lt;code&gt;.github/workflows/&lt;/code&gt; folder and run &lt;code&gt;git add .github&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a custom github action, like the following:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;language-yaml&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# .github/workflows/build.yml&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Build Eleventy
+
+&lt;span class=&quot;token key atrule&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; main
+
+&lt;span class=&quot;token key atrule&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ubuntu&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;22.04&lt;/span&gt;
+
+    &lt;span class=&quot;token key atrule&quot;&gt;strategy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;node-version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;16.x&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/checkout@v2
+
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Use Node.js $NaN
+        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/setup&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;node@v1
+        &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;token key atrule&quot;&gt;node-version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $NaN
+
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Install dependencies &amp;amp; build
+        &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token scalar string&quot;&gt;
+          npm ci
+          npm run build&lt;/span&gt;
+
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deploy
+        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; peaceiris/actions&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gh&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;pages@v3
+        &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;token key atrule&quot;&gt;publish_dir&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ./_site &lt;span class=&quot;token comment&quot;&gt;#this should match the output folder from eleventy.config.js&lt;/span&gt;
+          &lt;span class=&quot;token key atrule&quot;&gt;github_token&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;In the repo settings, &lt;strong&gt;change the pages Build Source&lt;/strong&gt; to the &lt;code&gt;gh-pages&lt;/code&gt; branch. (This took me several hours to figure out.) The custom action runs everytime the main branch is updated. The custom action updates the gh-pages branch with the built output of the site. Failing to change the GitHub Pages Build Source will result in a 404 error and tell you that there is no index.html file when you attempt to navigate to your site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;look-and-feel&quot; tabindex=&quot;-1&quot;&gt;Look and Feel &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I decided to use &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;eleventy-base-blog&lt;/a&gt; as a starting point for my theme. As an 11ty beginner, it offers a good structure and includes some default plugins already activated. (I think after the last few days of playing around, I am a bit more comfortable with the eleventy.config.js file.) Now, me being me, I can&#39;t just leave the default options in place.&lt;/p&gt;
+&lt;h4 id=&quot;theme-colors&quot; tabindex=&quot;-1&quot;&gt;Theme Colors &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Thankfully eleventy-base-blog includes support for automatic light and dark modes. The light theme is pretty much perfect, but the dark theme had some weird link colors. Light-purplish on a dark blue background 😠, really?! I changed it to shade of Vivid Blue. Found in &lt;code&gt;public/css/index.css&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;prefers-color-scheme&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; dark&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;--color-gray-20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #e0e0e0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;--color-gray-50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #C0C0C0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;--color-gray-90&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #dad8d8&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;token comment&quot;&gt;/* --text-color is assigned to --color-gray-_ above */&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;--text-color-link&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #1493fb&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;--text-color-link-active&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #2d9ffb&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;--text-color-link-visited&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #5fb6fc&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;token property&quot;&gt;--background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #15202b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;font-family&quot; tabindex=&quot;-1&quot;&gt;Font Family &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;The default settings are set up with a very basic &lt;em&gt;sans&lt;/em&gt; font family. It looks small compared to the text in the code blocks as well. I found a great font family on Google Fonts called &lt;a href=&quot;https://fonts.google.com/specimen/Amiri?query=Amiri&quot;&gt;Amiri&lt;/a&gt;. I made some more changes in the css.&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;--font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Amiri&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; serif&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token property&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--font-family&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token property&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1.12em&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The font used in the code blocks seemed too large for my taste. This turned into a learning moment. I thought I could simply change the &lt;code&gt;font-size&lt;/code&gt; for the &lt;code&gt;pre&lt;/code&gt; blocks to something like &lt;code&gt;.9em&lt;/code&gt;. Turns out that didn&#39;t change anything.  Apparently the way css inherits variable font sizes inside child elements means that &lt;code&gt;em&lt;/code&gt; doesn&#39;t  reference anything. I found that inside of the &lt;code&gt;pre&lt;/code&gt; block you must use &lt;code&gt;rem&lt;/code&gt; instead. &lt;code&gt;rem&lt;/code&gt; references the root of the document.&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:not(pre) &gt; code[class*=&quot;language-&quot;],
+pre[class*=&quot;language-&quot;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; .9rem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Much better!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Time for a nightcap. Goodnight! 🥱&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Snorkeling</title>
