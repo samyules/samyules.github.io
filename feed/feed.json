@@ -11,6 +11,14 @@
 	},
 	"items": [
 		{
+			"id": "https://example.com/blog/2024-03-04-moving-one-step-forward/",
+			"url": "https://example.com/blog/2024-03-04-moving-one-step-forward/",
+			"title": "Moving One Step Forward",
+			"content_html": "<h2 id=\"more-11ty-fun\" tabindex=\"-1\">More 11ty fun! <a class=\"header-anchor\" href=\"https://example.com/blog/2024-03-04-moving-one-step-forward/\">#</a></h2>\n<ul>\n<li>[X] Replace home page with latest blog post.</li>\n<li>[X] Fix web fonts (actually link the stylesheets inside the <head> of the index)</head></li>\n</ul>\n<p>I feel so much better now to get those checked off the list! <em><strong>Whew!</strong></em></p>\n<h2 id=\"worky-work\" tabindex=\"-1\">Worky Work <a class=\"header-anchor\" href=\"https://example.com/blog/2024-03-04-moving-one-step-forward/\">#</a></h2>\n<p>One thing that I have noticed about myself is that at the end of the work-day I am not great at writing. I should do this more in the morning.</p>\n<p>Time for some more coffee ☕️.</p>\n",
+			"date_published": "2024-03-04T00:00:00Z"
+		}
+		,
+		{
 			"id": "https://example.com/blog/2024-03-02-triumph-of-the-blogman/",
 			"url": "https://example.com/blog/2024-03-02-triumph-of-the-blogman/",
 			"title": "Triumph of the Blogman",
