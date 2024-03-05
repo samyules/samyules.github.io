@@ -16,7 +16,7 @@
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700" rel="stylesheet">
 		
 		<style>.postlist { counter-reset: start-from 3 }
 * { box-sizing: border-box; }
@@ -192,7 +192,8 @@ header {
 	padding: 1em;
 }
 .home-link {
-	font-size: 1em; /* 16px /16 */
+	font-family: var(--font-family-headings);
+	font-size: 1.2em; /* 16px /16 */
 	font-weight: 700;
 	margin-right: 2em;
 }
@@ -314,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 + .header-anchor {
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 hr.dashed {
