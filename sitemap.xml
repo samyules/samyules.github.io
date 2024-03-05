@@ -110,4 +110,24 @@
 		<loc>https://example.com/tags/tailscale/</loc>
 		<lastmod>2024-03-05</lastmod>
 	</url>
+	
+	<url>
+		<loc>https://example.com/tags/learning/</loc>
+		<lastmod>2024-03-05</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/teaching/</loc>
+		<lastmod>2024-03-05</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/apprenticeship/</loc>
+		<lastmod>2024-03-05</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/cognition/</loc>
+		<lastmod>2024-03-05</lastmod>
+	</url>
 </urlset>
