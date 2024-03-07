@@ -23,111 +23,111 @@
 	
 	<url>
 		<loc>https://example.com/about/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/blog/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/networking/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/xfinity/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/evil/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/cg-nat/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/homelab/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/rant/</loc>
-		<lastmod>2024-03-05</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/11ty/</loc>
-		<lastmod>2024-03-05</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/font-size/</loc>
-		<lastmod>2024-03-05</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/css/</loc>
-		<lastmod>2024-03-05</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/github-actions/</loc>
-		<lastmod>2024-03-05</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/tags/github-pages/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/snorkel/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/public-ip/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/tailscale/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/11ty/</loc>
+		<lastmod>2024-03-07</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/font-size/</loc>
+		<lastmod>2024-03-07</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/css/</loc>
+		<lastmod>2024-03-07</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/github-actions/</loc>
+		<lastmod>2024-03-07</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/tags/github-pages/</loc>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/learning/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/teaching/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/apprenticeship/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://example.com/tags/cognition/</loc>
-		<lastmod>2024-03-05</lastmod>
+		<lastmod>2024-03-07</lastmod>
 	</url>
 </urlset>

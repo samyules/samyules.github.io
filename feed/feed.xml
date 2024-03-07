@@ -17,9 +17,9 @@
 		<updated>2024-03-04T00:00:00Z</updated>
 		<id>https://example.com/blog/2024-03-04-moving-one-step-forward/</id>
 		<content type="html">&lt;h2 id=&quot;more-11ty-fun&quot; tabindex=&quot;-1&quot;&gt;More 11ty fun! &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-04-moving-one-step-forward/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;[X] Replace home page with latest blog post.&lt;/li&gt;
-&lt;li&gt;[X] Fix web fonts (actually link the stylesheets inside the &lt;head&gt; of the index)&lt;/head&gt;&lt;/li&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input class=&quot;task-list-item-checkbox&quot; checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;s&gt;Replace home page with latest blog post.&lt;/s&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input class=&quot;task-list-item-checkbox&quot; checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;s&gt;fix web fonts (actually link the stylesheets inside the &lt;head&gt; of the index)&lt;/head&gt;&lt;/s&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I feel so much better now to get those checked off the list! &lt;em&gt;&lt;strong&gt;Whew!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;worky-work&quot; tabindex=&quot;-1&quot;&gt;Worky Work &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-04-moving-one-step-forward/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
