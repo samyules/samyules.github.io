@@ -11,6 +11,22 @@
 	},
 	"items": [
 		{
+			"id": "https://example.com/blog/trepidation/",
+			"url": "https://example.com/blog/trepidation/",
+			"title": "Easter Sunday",
+			"content_html": "<p>Trepidation\n: a nervous or fearful feeling of uncertain agitation</p>\n<p>Watching as your children grow is such an amazing experience. Today I watched my little one as she was leaving our row in church to go sing with the Primary. I asked her <em>are you ready to go?</em> She practically jumped off of her chair. <em>Yes!</em>  she shouted—her eyes full of excitement and pride. I told her <em>it’s time to go.</em> She took a few steps, then stopped and turned around. Nervously she said <em>okay. Bye!</em> Then stood still. Not wanting to seem too much like little child—but not sure of going it alone. My heart jumped. I want to say <em>It’s okay to feel a little trepidation!</em> and knowing that these moments will happen less and less often, I jump out of my seat and hold her little hand. We walk together to the front of the chapel. She joins her friends and sings the song.</p>\n",
+			"date_published": "2024-03-31T00:00:00Z"
+		}
+		,
+		{
+			"id": "https://example.com/blog/2024-03-29-management/",
+			"url": "https://example.com/blog/2024-03-29-management/",
+			"title": "Herding the crowd",
+			"content_html": "<blockquote>\n<p>The difference between a manager and a leader is their focus. A manager focuses on inputs. A leader focuses on outputs.</p>\n</blockquote>\n<h2 id=\"behind-the-desk\" tabindex=\"-1\">Behind the Desk <a class=\"header-anchor\" href=\"https://example.com/blog/2024-03-29-management/\">#</a></h2>\n<p>It has been an interesting week at work. Annual evaluations were due. We also had the State <em>Mechanic of the Year</em> competition. My best employee <em>and</em> my worst employee both decided to resign.</p>\n<p>That was unexpected.</p>\n<p>I take my new role pretty seriously. I try to be the best <em>leader</em> that I can be. I probably have more failures than I realize because I don't hear all of the scuffle. My goal is to be that supervisor that can lead people through the tough times. When more than one person hands me their resignation, I can't help but look in the mirror to see what I need to change.</p>\n",
+			"date_published": "2024-03-29T00:00:00Z"
+		}
+		,
+		{
 			"id": "https://example.com/blog/2024-03-04-moving-one-step-forward/",
 			"url": "https://example.com/blog/2024-03-04-moving-one-step-forward/",
 			"title": "Moving One Step Forward",

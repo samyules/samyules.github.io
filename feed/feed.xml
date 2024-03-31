@@ -4,12 +4,38 @@
 	<subtitle>A place to throw my scrambled brains against the wall to see what sticks.</subtitle>
 	<link href="https://example.com/feed/feed.xml" rel="self"/>
 	<link href="https://example.com/"/>
-	<updated>2024-03-04T00:00:00Z</updated>
+	<updated>2024-03-31T00:00:00Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Sam Westwood</name>
 		<email>sam@thewestwoods.us</email>
 	</author>
+	
+	<entry>
+		<title>Easter Sunday</title>
+		<link href="https://example.com/blog/trepidation/"/>
+		<updated>2024-03-31T00:00:00Z</updated>
+		<id>https://example.com/blog/trepidation/</id>
+		<content type="html">&lt;p&gt;Trepidation
+: a nervous or fearful feeling of uncertain agitation&lt;/p&gt;
+&lt;p&gt;Watching as your children grow is such an amazing experience. Today I watched my little one as she was leaving our row in church to go sing with the Primary. I asked her &lt;em&gt;are you ready to go?&lt;/em&gt; She practically jumped off of her chair. &lt;em&gt;Yes!&lt;/em&gt;  she shouted—her eyes full of excitement and pride. I told her &lt;em&gt;it’s time to go.&lt;/em&gt; She took a few steps, then stopped and turned around. Nervously she said &lt;em&gt;okay. Bye!&lt;/em&gt; Then stood still. Not wanting to seem too much like little child—but not sure of going it alone. My heart jumped. I want to say &lt;em&gt;It’s okay to feel a little trepidation!&lt;/em&gt; and knowing that these moments will happen less and less often, I jump out of my seat and hold her little hand. We walk together to the front of the chapel. She joins her friends and sings the song.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Herding the crowd</title>
+		<link href="https://example.com/blog/2024-03-29-management/"/>
+		<updated>2024-03-29T00:00:00Z</updated>
+		<id>https://example.com/blog/2024-03-29-management/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;The difference between a manager and a leader is their focus. A manager focuses on inputs. A leader focuses on outputs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;behind-the-desk&quot; tabindex=&quot;-1&quot;&gt;Behind the Desk &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-29-management/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;It has been an interesting week at work. Annual evaluations were due. We also had the State &lt;em&gt;Mechanic of the Year&lt;/em&gt; competition. My best employee &lt;em&gt;and&lt;/em&gt; my worst employee both decided to resign.&lt;/p&gt;
+&lt;p&gt;That was unexpected.&lt;/p&gt;
+&lt;p&gt;I take my new role pretty seriously. I try to be the best &lt;em&gt;leader&lt;/em&gt; that I can be. I probably have more failures than I realize because I don&#39;t hear all of the scuffle. My goal is to be that supervisor that can lead people through the tough times. When more than one person hands me their resignation, I can&#39;t help but look in the mirror to see what I need to change.&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Moving One Step Forward</title>

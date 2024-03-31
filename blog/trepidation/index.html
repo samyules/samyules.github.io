@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Scrambled Brains for Breakfast</title>
+		<title>Easter Sunday</title>
 		<meta name="description" content="A place to throw my scrambled brains against the wall to see what sticks.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Scrambled Brains for Breakfast">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Scrambled Brains for Breakfast">
@@ -18,7 +18,174 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700" rel="stylesheet">
 		
-		<style>.postlist { counter-reset: start-from 7 }
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
 * { box-sizing: border-box; }
 /* Defaults */
 :root {
@@ -332,7 +499,7 @@ hr.dashed {
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/blog/" aria-current="page">Archive</a></li>
+					<li class="nav-item"><a href="/blog/">Archive</a></li>
 					<li class="nav-item"><a href="/tags/">Tags</a></li>
 					<li class="nav-item"><a href="/about/">About Me</a></li>
 				</ul>
@@ -341,50 +508,24 @@ hr.dashed {
 
 		<main id="skip">
 			
-<h1>Archive</h1>
+<h1>Easter Sunday</h1>
 
+<ul class="post-metadata">
+	<li><time datetime="2024-03-31">31 March 2024</time></li>
+	<li><a href="/tags/family/" class="post-tag">family</a></li>
+</ul>
 
+<p>Trepidation
+: a nervous or fearful feeling of uncertain agitation</p>
+<p>Watching as your children grow is such an amazing experience. Today I watched my little one as she was leaving our row in church to go sing with the Primary. I asked her <em>are you ready to go?</em> She practically jumped off of her chair. <em>Yes!</em>  she shouted—her eyes full of excitement and pride. I told her <em>it’s time to go.</em> She took a few steps, then stopped and turned around. Nervously she said <em>okay. Bye!</em> Then stood still. Not wanting to seem too much like little child—but not sure of going it alone. My heart jumped. I want to say <em>It’s okay to feel a little trepidation!</em> and knowing that these moments will happen less and less often, I jump out of my seat and hold her little hand. We walk together to the front of the chapel. She joins her friends and sings the song.</p>
 
-<ol reversed class="postlist">
-
-	<li class="postlist-item">
-		<a href="/blog/trepidation/" class="postlist-link">Easter Sunday</a>
-		<time class="postlist-date" datetime="2024-03-31">March 2024</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-03-29-management/" class="postlist-link">Herding the crowd</a>
-		<time class="postlist-date" datetime="2024-03-29">March 2024</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-03-04-moving-one-step-forward/" class="postlist-link">Moving One Step Forward</a>
-		<time class="postlist-date" datetime="2024-03-04">March 2024</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-03-02-triumph-of-the-blogman/" class="postlist-link">Triumph of the Blogman</a>
-		<time class="postlist-date" datetime="2024-03-02">March 2024</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-02-25-snorkeling/" class="postlist-link">Snorkeling</a>
-		<time class="postlist-date" datetime="2024-02-25">February 2024</time>
-	</li>
-
-	<li class="postlist-item">
-		<a href="/blog/2024-02-24-diving-into-the-deep/" class="postlist-link">Diving into the deep</a>
-		<time class="postlist-date" datetime="2024-02-24">February 2024</time>
-	</li>
-
-</ol>
-
-
+<ul class="links-nextprev"><li>Previous: <a href="/blog/2024-03-29-management/">Herding the crowd</a></li>
+</ul>
 
 		</main>
 
 		<footer></footer>
 
-		<!-- Current page: /blog/ -->
+		<!-- Current page: /blog/trepidation/ -->
 	</body>
 </html>
