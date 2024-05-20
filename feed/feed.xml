@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
 	<title>Scrambled Brains for Breakfast</title>
 	<subtitle>A place to throw my scrambled brains against the wall to see what sticks.</subtitle>
-	<link href="https://example.com/feed/feed.xml" rel="self"/>
-	<link href="https://example.com/"/>
+	<link href="https://samyules.github.com/feed/feed.xml" rel="self"/>
+	<link href="https://samyules.github.com/"/>
 	<updated>2024-03-31T00:00:00Z</updated>
-	<id>https://example.com/</id>
+	<id>https://samyules.github.com/</id>
 	<author>
 		<name>Sam Westwood</name>
 		<email>sam@thewestwoods.us</email>
@@ -13,9 +13,9 @@
 	
 	<entry>
 		<title>Easter Sunday</title>
-		<link href="https://example.com/blog/trepidation/"/>
+		<link href="https://samyules.github.com/blog/trepidation/"/>
 		<updated>2024-03-31T00:00:00Z</updated>
-		<id>https://example.com/blog/trepidation/</id>
+		<id>https://samyules.github.com/blog/trepidation/</id>
 		<content type="html">&lt;p&gt;Trepidation
 : a nervous or fearful feeling of uncertain agitation&lt;/p&gt;
 &lt;p&gt;Watching as your children grow is such an amazing experience. Today I watched my little one as she was leaving our row in church to go sing with the Primary. I asked her &lt;em&gt;are you ready to go?&lt;/em&gt; She practically jumped off of her chair. &lt;em&gt;Yes!&lt;/em&gt;  she shouted—her eyes full of excitement and pride. I told her &lt;em&gt;it’s time to go.&lt;/em&gt; She took a few steps, then stopped and turned around. Nervously she said &lt;em&gt;okay. Bye!&lt;/em&gt; Then stood still. Not wanting to seem too much like little child—but not sure of going it alone. My heart jumped. I want to say &lt;em&gt;It’s okay to feel a little trepidation!&lt;/em&gt; and knowing that these moments will happen less and less often, I jump out of my seat and hold her little hand. We walk together to the front of the chapel. She joins her friends and sings the song.&lt;/p&gt;
@@ -24,13 +24,13 @@
 	
 	<entry>
 		<title>Herding the crowd</title>
-		<link href="https://example.com/blog/2024-03-29-management/"/>
+		<link href="https://samyules.github.com/blog/2024-03-29-management/"/>
 		<updated>2024-03-29T00:00:00Z</updated>
-		<id>https://example.com/blog/2024-03-29-management/</id>
+		<id>https://samyules.github.com/blog/2024-03-29-management/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;The difference between a manager and a leader is their focus. A manager focuses on inputs. A leader focuses on outputs.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;behind-the-desk&quot; tabindex=&quot;-1&quot;&gt;Behind the Desk &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-29-management/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;behind-the-desk&quot; tabindex=&quot;-1&quot;&gt;Behind the Desk &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-29-management/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;It has been an interesting week at work. Annual evaluations were due. We also had the State &lt;em&gt;Mechanic of the Year&lt;/em&gt; competition. My best employee &lt;em&gt;and&lt;/em&gt; my worst employee both decided to resign.&lt;/p&gt;
 &lt;p&gt;That was unexpected.&lt;/p&gt;
 &lt;p&gt;I take my new role pretty seriously. I try to be the best &lt;em&gt;leader&lt;/em&gt; that I can be. I probably have more failures than I realize because I don&#39;t hear all of the scuffle. My goal is to be that supervisor that can lead people through the tough times. When more than one person hands me their resignation, I can&#39;t help but look in the mirror to see what I need to change.&lt;/p&gt;
@@ -39,16 +39,16 @@
 	
 	<entry>
 		<title>Moving One Step Forward</title>
-		<link href="https://example.com/blog/2024-03-04-moving-one-step-forward/"/>
+		<link href="https://samyules.github.com/blog/2024-03-04-moving-one-step-forward/"/>
 		<updated>2024-03-04T00:00:00Z</updated>
-		<id>https://example.com/blog/2024-03-04-moving-one-step-forward/</id>
-		<content type="html">&lt;h2 id=&quot;more-11ty-fun&quot; tabindex=&quot;-1&quot;&gt;More 11ty fun! &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-04-moving-one-step-forward/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+		<id>https://samyules.github.com/blog/2024-03-04-moving-one-step-forward/</id>
+		<content type="html">&lt;h2 id=&quot;more-11ty-fun&quot; tabindex=&quot;-1&quot;&gt;More 11ty fun! &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-04-moving-one-step-forward/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class=&quot;contains-task-list&quot;&gt;
 &lt;li class=&quot;task-list-item&quot;&gt;&lt;input class=&quot;task-list-item-checkbox&quot; checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;s&gt;Replace home page with latest blog post.&lt;/s&gt;&lt;/li&gt;
 &lt;li class=&quot;task-list-item&quot;&gt;&lt;input class=&quot;task-list-item-checkbox&quot; checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;s&gt;fix web fonts (actually link the stylesheets inside the &lt;head&gt; of the index)&lt;/head&gt;&lt;/s&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I feel so much better now to get those checked off the list! &lt;em&gt;&lt;strong&gt;Whew!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;worky-work&quot; tabindex=&quot;-1&quot;&gt;Worky Work &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-04-moving-one-step-forward/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;worky-work&quot; tabindex=&quot;-1&quot;&gt;Worky Work &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-04-moving-one-step-forward/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;One thing that I have noticed about myself is that at the end of the work-day I am not great at writing. I should do this more in the morning.&lt;/p&gt;
 &lt;p&gt;Time for some more coffee ☕️.&lt;/p&gt;
 </content>
@@ -56,13 +56,13 @@
 	
 	<entry>
 		<title>Triumph of the Blogman</title>
-		<link href="https://example.com/blog/2024-03-02-triumph-of-the-blogman/"/>
+		<link href="https://samyules.github.com/blog/2024-03-02-triumph-of-the-blogman/"/>
 		<updated>2024-03-02T00:00:00Z</updated>
-		<id>https://example.com/blog/2024-03-02-triumph-of-the-blogman/</id>
+		<id>https://samyules.github.com/blog/2024-03-02-triumph-of-the-blogman/</id>
 		<content type="html">&lt;p&gt;I spent my free time this week converting my github pages site from jekyll to &lt;a href=&quot;https://11ty.dev&quot;&gt;11ty&lt;/a&gt;. I&#39;m fairly new to the whole static-site-generator scene. My blog only had 2 or 3 posts. The main problem I had with jekyll is the build times. My site, with only a few posts and a fairly simple theme took around &lt;strong&gt;5 minutes&lt;/strong&gt; to build. Could it be any slower? It is also written in &lt;em&gt;perl&lt;/em&gt; 🤢. (There is &lt;em&gt;probably&lt;/em&gt; nothing wrong with the perl language, but it is &lt;em&gt;sooo&lt;/em&gt; 1990, and I know &lt;strong&gt;nothing&lt;/strong&gt; about it.) For the same content, &lt;em&gt;11ty&lt;/em&gt; builds only take about &lt;em&gt;&lt;strong&gt;25 seconds&lt;/strong&gt;&lt;/em&gt;. Less than a minute after doing a &lt;code&gt;git push&lt;/code&gt;, I can see the update on my site! 11ty is written in JavaScript too, so it&#39;s a bit more familiar for me.&lt;/p&gt;
-&lt;h2 id=&quot;issues&quot; tabindex=&quot;-1&quot;&gt;Issues &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;issues&quot; tabindex=&quot;-1&quot;&gt;Issues &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Throughout this process I ran into a few issues. The first problem was that I didn&#39;t know how to stop using jekyll. Github pages default to building with jekyll, and from searching and reading I had gathered that it was possible. However, the forums and tutorials that I found were not very clear about the process. Well—disabling jekyll is pretty easy. Just add an empty file called &lt;code&gt;.nojekyll&lt;/code&gt; to the repository. What I had a hard time with was &lt;em&gt;replacing&lt;/em&gt; jekyll with something else. I ended up finding &lt;a href=&quot;https://www.linkedin.com/pulse/eleventy-github-pages-lea-tortay/&quot;&gt;this tutorial&lt;/a&gt; from 4 years ago that worked.&lt;/p&gt;
-&lt;h3 id=&quot;github-actions&quot; tabindex=&quot;-1&quot;&gt;GitHub actions &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;github-actions&quot; tabindex=&quot;-1&quot;&gt;GitHub actions &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;First create a &lt;code&gt;.nojekyll&lt;/code&gt; file.&lt;/li&gt;
 &lt;li&gt;Create a &lt;code&gt;.github/workflows/&lt;/code&gt; folder and run &lt;code&gt;git add .github&lt;/code&gt;&lt;/li&gt;
@@ -105,9 +105,9 @@
 &lt;ol start=&quot;4&quot;&gt;
 &lt;li&gt;In the repo settings, &lt;strong&gt;change the pages Build Source&lt;/strong&gt; to the &lt;code&gt;gh-pages&lt;/code&gt; branch. (This took me several hours to figure out.) The custom action runs everytime the main branch is updated. The custom action updates the gh-pages branch with the built output of the site. Failing to change the GitHub Pages Build Source will result in a 404 error and tell you that there is no index.html file when you attempt to navigate to your site.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;look-and-feel&quot; tabindex=&quot;-1&quot;&gt;Look and Feel &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;look-and-feel&quot; tabindex=&quot;-1&quot;&gt;Look and Feel &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;I decided to use &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;eleventy-base-blog&lt;/a&gt; as a starting point for my theme. As an 11ty beginner, it offers a good structure and includes some default plugins already activated. (I think after the last few days of playing around, I am a bit more comfortable with the eleventy.config.js file.) Now, me being me, I can&#39;t just leave the default options in place.&lt;/p&gt;
-&lt;h4 id=&quot;theme-colors&quot; tabindex=&quot;-1&quot;&gt;Theme Colors &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;theme-colors&quot; tabindex=&quot;-1&quot;&gt;Theme Colors &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Thankfully eleventy-base-blog includes support for automatic light and dark modes. The light theme is pretty much perfect, but the dark theme had some weird link colors. Light-purplish on a dark blue background 😠, really?! I changed it to shade of Vivid Blue. Found in &lt;code&gt;public/css/index.css&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&quot;language-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;prefers-color-scheme&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; dark&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -123,7 +123,7 @@
 		&lt;span class=&quot;token property&quot;&gt;--background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #15202b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;font-family&quot; tabindex=&quot;-1&quot;&gt;Font Family &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;font-family&quot; tabindex=&quot;-1&quot;&gt;Font Family &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-03-02-triumph-of-the-blogman/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;The default settings are set up with a very basic &lt;em&gt;sans&lt;/em&gt; font family. It looks small compared to the text in the code blocks as well. I found a great font family on Google Fonts called &lt;a href=&quot;https://fonts.google.com/specimen/Amiri?query=Amiri&quot;&gt;Amiri&lt;/a&gt;. I made some more changes in the css.&lt;/p&gt;
 &lt;pre class=&quot;language-css&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;--font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Amiri&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; serif&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -145,9 +145,9 @@ pre[class*=&quot;language-&quot;]&lt;/span&gt; &lt;span class=&quot;token punctu
 	
 	<entry>
 		<title>Snorkeling</title>
-		<link href="https://example.com/blog/2024-02-25-snorkeling/"/>
+		<link href="https://samyules.github.com/blog/2024-02-25-snorkeling/"/>
 		<updated>2024-02-25T00:00:00Z</updated>
-		<id>https://example.com/blog/2024-02-25-snorkeling/</id>
+		<id>https://samyules.github.com/blog/2024-02-25-snorkeling/</id>
 		<content type="html">&lt;p&gt;I am now a T-mobile Home Internet customer. It uses 4G LTE and 5G cellular networks to provide internet connectivity. They provide you with a cellular modem/router with a wifi hotspot and a couple of ethernet ports. I figured out how to disable the wifi and connected it to the WAN port of my UDM Pro. Easy-peasy.&lt;/p&gt;
 &lt;p&gt;There are some trade offs. There is some variability in the signal quality, which translates to extra latency some of the time. The cellular networks also use CG-NAT and &lt;strong&gt;T-mobile does not provide a public IP address.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I could get around this by setting up some &lt;em&gt;Cloudflare tunnels&lt;/em&gt;. They are easy and work great. The main problem is that I want to control my own SSL certificates. Cloudflare creates a wildcard certificate for subdomains (*.mydomain.io), but only root level subdomains. Inside my LAN I use sub-subdomains. For example, &lt;em&gt;service.computername&lt;/em&gt;.mydomain.io. For publicly exposed services I prefer using the same URL inside my LAN and over WAN, and Cloudflare tunnels are not able to give me that.&lt;/p&gt;
@@ -166,9 +166,9 @@ pre[class*=&quot;language-&quot;]&lt;/span&gt; &lt;span class=&quot;token punctu
        &#92;____________
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So basically, I’ve got a VPS with a public IP. It connects to my DMZ proxy server through my Tailscale tailnet. The VPS forwards any traffic it receives on ports 80 and 443 to the proxy server. &lt;strong&gt;¡Viola! A snorkel!&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;forwarding-packets&quot; tabindex=&quot;-1&quot;&gt;Forwarding Packets &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-02-25-snorkeling/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;forwarding-packets&quot; tabindex=&quot;-1&quot;&gt;Forwarding Packets &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-02-25-snorkeling/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;My initial thought was to turn my VPS into a router. I tried using iptables to forward ports, but I’m not very good at writing rules and had a few problems. I couldn’t figure out how to forward packets through tailscale. 🤔 After some more searching around the interwebs I found an old program called &lt;em&gt;&lt;a href=&quot;https://github.com/samhocevar/rinetd&quot;&gt;rinetd&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;rinetd-setup&quot; tabindex=&quot;-1&quot;&gt;rinetd setup &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/blog/2024-02-25-snorkeling/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;rinetd-setup&quot; tabindex=&quot;-1&quot;&gt;rinetd setup &lt;a class=&quot;header-anchor&quot; href=&quot;https://samyules.github.com/blog/2024-02-25-snorkeling/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;rinetd&lt;/em&gt; silently forwards tcp and udp traffic. It is found in most linux package managers. I’m using an Ubuntu server, so I installed it with an easy &lt;code&gt;sudo apt install rinetd&lt;/code&gt;. The configuration file is found in &lt;code&gt;/etc/rinetd.conf&lt;/code&gt;. The main section looks like this:&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# bindaddress bindport connectaddress connectport&lt;/span&gt;
 &lt;span class=&quot;token number&quot;&gt;137.184&lt;/span&gt;.89.83 &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100.86&lt;/span&gt;.67.77 &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;
@@ -180,9 +180,9 @@ pre[class*=&quot;language-&quot;]&lt;/span&gt; &lt;span class=&quot;token punctu
 	
 	<entry>
 		<title>Diving into the deep</title>
-		<link href="https://example.com/blog/2024-02-24-diving-into-the-deep/"/>
+		<link href="https://samyules.github.com/blog/2024-02-24-diving-into-the-deep/"/>
 		<updated>2024-02-24T00:00:00Z</updated>
-		<id>https://example.com/blog/2024-02-24-diving-into-the-deep/</id>
+		<id>https://samyules.github.com/blog/2024-02-24-diving-into-the-deep/</id>
 		<content type="html">&lt;p&gt;Recently I had a little &lt;em&gt;snafu&lt;/em&gt; with Xfinity. I have been an Xfinity customer for more than a decade. In my area, it has really been the &lt;em&gt;only&lt;/em&gt; option for high-speed internet connections. I have always felt uneasy about the leverage that Xfinity has had over the market. I hate the equipment fees, and the lack of good customer service. I refused to use an Xfinity router or modem, instead opting to buy my own.&lt;/p&gt;
 &lt;p&gt;A few years ago they implemented a data cap, and I — untrusting of the monopoly-induced power of the company — purchased a UDM Pro SE and started measuring my own data usage. Throughout these years the usage reported by Xfinity was typically higher than my own measurements, but within a reasonable margin of error. However, that changed in December of 2023. During that month the UDM Pro measured about 800GB of throughput, and Xfinity reported a whopping &lt;strong&gt;2400GB&lt;/strong&gt; of usage! &lt;strong&gt;Three times more&lt;/strong&gt;!&lt;/p&gt;
 &lt;p&gt;I walked in to the nearest Xfinity store intending to ask for a service ticket. &lt;s&gt;However, I was told in no uncertain terms that &lt;em&gt;&lt;strong&gt;the Lord God of Xfinity&lt;/strong&gt;&lt;/em&gt; in it&#39;s &lt;em&gt;&lt;strong&gt;mighty Glory&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;omnicient knowing&lt;/strong&gt;&lt;/em&gt; is the &lt;em&gt;only&lt;/em&gt; source of &lt;strong&gt;truth&lt;/strong&gt;. My own paltry attempt at measuring throughput was meaningless. &lt;em&gt;Xfinity&#39;s&lt;/em&gt; mighty judgement would not be questioned! How dare I question it?&lt;/s&gt; &lt;em&gt;Okay, okay... those were not their exact words, but they are not &lt;strong&gt;that&lt;/strong&gt; hyperbolic either.&lt;/em&gt; They refused to submit a service ticket on my behalf, and told me to quietly pay the bill of over $300, &lt;s&gt;and that I should leave with a &lt;em&gt;smile&lt;/em&gt; on my face&lt;/s&gt;.&lt;/p&gt;
