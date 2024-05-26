@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Scrambled Brains for Breakfast",
-	url: "https://example.com/",
+	url: "https://samyules.github.com/",
 	language: "en",
 	description: "A place to throw my scrambled brains against the wall to see what sticks.",
 	author: {
